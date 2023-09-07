@@ -1,4 +1,4 @@
-package com.java10;
+package com.java.version.java10;
 
 import java.util.ArrayList;
 import java.util.List;
