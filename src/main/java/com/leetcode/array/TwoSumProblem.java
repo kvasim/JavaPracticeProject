@@ -66,7 +66,7 @@ public class TwoSumProblem {
         //{2,5,5,11};//10
         for (int i = 0; i < nums.length; i++) {
             int num = nums[i];
-            int diff = target - num;
+            Integer diff = target - num;
 
             if (prevMap.containsKey(diff)) {
                 return new int[] { prevMap.get(diff), i };

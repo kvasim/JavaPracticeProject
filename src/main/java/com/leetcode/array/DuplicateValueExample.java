@@ -48,10 +48,11 @@ public class DuplicateValueExample {
         }
         return isDuplicate;
     }
+    //Copy
     public static boolean containsDuplicateFinal(int[] nums) {
         Set<Integer> uniques = new HashSet<>();
         for (int i = 0; i < nums.length; i++) {
-            if (uniques.contains(nums[i])) {
+            if (uniques.contains(Integer.valueOf(nums[i]))) {
                 return true;
             }
             uniques.add(nums[i]);

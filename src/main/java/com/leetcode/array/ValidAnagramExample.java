@@ -4,8 +4,8 @@ import java.util.Arrays;
 
 public class ValidAnagramExample {
     public static void main(String[] args) {
-        String s="tac";
-        String t="cat";
+        String s="abc";
+        String t="xyz";
         boolean result = isAnagram(s,t);
         System.out.println("Strings are anagram :"+result);
     }
@@ -18,8 +18,6 @@ public class ValidAnagramExample {
         char[] secondString = t.toCharArray();
         Arrays.sort(firstString);
         Arrays.sort(secondString);
-        System.out.println(Arrays.toString(firstString));
-        System.out.println(Arrays.toString(secondString));
         return Arrays.toString(firstString).equals(Arrays.toString(secondString));
     }
     public static boolean isAnagram(String s, String t) {
@@ -28,14 +26,14 @@ public class ValidAnagramExample {
         int[] store = new int[26];
 
         for (int i = 0; i < s.length(); i++) {
-            store[s.charAt(i) - 'a']++;
-            System.out.println(Arrays.toString(store));
+            store[s.charAt(i) - 'a']++;//store[5]
+            //System.out.println(Arrays.toString(store));
             store[t.charAt(i) - 'a']--;
             System.out.println(Arrays.toString(store));
         }
         System.out.println(Arrays.toString(store));
         for (int n : store) if (n != 0) return false;
-
+//O(n)
         return true;
     }
 }
